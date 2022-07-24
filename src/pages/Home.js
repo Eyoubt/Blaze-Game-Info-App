@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 // Redux
 import { loadGames } from "../actions/gamesAction";
 import { useDispatch, useSelector } from "react-redux";
-import { loadDetail } from "../actions/detailAction";
 // Components
 import Game from "../components/Game";
 import GameDetail from "../components/GameDetail";

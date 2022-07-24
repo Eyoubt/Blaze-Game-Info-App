@@ -81,6 +81,7 @@ function GameDetail({ pathId }) {
                   {game.platforms &&
                     game.platforms.map((data) => (
                       <img
+                        alt={data.platform.name}
                         key={data.platform.id}
                         src={getPlatform(data.platform.name)}
                         title={data.platform.name}
