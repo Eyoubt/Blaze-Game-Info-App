@@ -3,22 +3,21 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // REDUX SETUP
-import { createStore, applyMiddleware, compose } from "redux";
-import rootReducer from "./reducers";
 import { Provider } from "react-redux";
-import thunk from "redux-thunk";
-import { BrowserRouter } from "react-router-dom";
-const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+import { configureStore } from "@reduxjs/toolkit";
+import gamesReducer from "./reducers/gamesSlicer";
 
-const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)));
+const store = configureStore({
+  reducer: {
+    games: gamesReducer,
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <App />
     </Provider>
   </React.StrictMode>
 );
