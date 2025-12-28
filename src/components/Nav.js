@@ -52,7 +52,7 @@ const StyledNav = styled(motion.nav)`
     border-radius: 1.5rem;
     width: 100%;
     font-size: 1.5rem;
-    padding-left: 1.5rem;
+    padding: 0.5rem;
     border: none;
     margin-top: 1rem;
     outline: none;
@@ -61,7 +61,7 @@ const StyledNav = styled(motion.nav)`
   button {
     font-size: 1.5rem;
     border: none;
-    padding: 0.67rem 2rem;
+    padding: 0.53rem 2rem;
     cursor: pointer;
     background: #ff7676;
     color: white;
